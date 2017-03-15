@@ -7,17 +7,30 @@ public class HighArray {
 		a = new long[max];
 		nElems = 0;
 	}
-	public boolean find(long serachKey) {
-		int j;
-		for(j=0; j<nElems; j++)
-			if(a[j] == serachKey)
-				break;
-		if(j == nElems) return false;
-		else return true;
+	public int find(long searchKey) {
+		int l = 0;
+		int r = nElems - 1;
+		int curIndex;
+		while(true) {
+			curIndex = ( l + r) /2;
+			if(a[curIndex] == searchKey) {
+				return curIndex;
+			}else if(l > r) {
+				return nElems;
+			}else{
+				if(a[curIndex] < searchKey)
+					l = curIndex + 1;
+				else 
+					r = curIndex - 1;
+			}
+		}
 	}
 	public void insert(long value) {
 		a[nElems] = value;
 		nElems ++;
+	}
+	public int  length() {
+		return a.length;
 	}
 	public boolean delete(long value) {
 		int j;

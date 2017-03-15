@@ -13,8 +13,9 @@ public class HighArrayApp {
 		arr.display();
 		System.out.println("---------insert test-----------------");
 		int searchKey = 34;
-		if(arr.find(searchKey)){
-			System.out.println(" Found " + searchKey);
+		int result = arr.find(searchKey);
+		if(result != arr.length()){
+			System.out.println(" Found " + searchKey + " in " + result );
 		} else{
 			System.out.println(" Not Found ");
 		}

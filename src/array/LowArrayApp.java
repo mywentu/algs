@@ -1,6 +1,0 @@
-package array;
-
-
-class LowArrayApp {
-	
-}

@@ -33,15 +33,13 @@ public class HighArray {
 		return a.length;
 	}
 	public boolean delete(long value) {
-		int j;
-		for(j=0; j<nElems; j++){
-			if(value == a[j])
-				break;
-		}
-		if(j==nElems) {
+		int index = find(value);
+		System.out.println("index" +index);
+		System.out.println("value" +value);
+		if(index==nElems) {
 			return false; //not found value
 		} else {
-			for(int k=j; k<nElems; k++)
+			for(int k=index; k<nElems; k++)
 				a[k] = a[k+1];
 			nElems--;
 			return true;

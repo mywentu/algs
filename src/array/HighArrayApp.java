@@ -5,14 +5,14 @@ public class HighArrayApp {
 		int maxSize = 100;
 		HighArray arr;
 		arr = new HighArray(maxSize);
-		arr.insert(89);
-		arr.insert(32);
-		arr.insert(34);
+		arr.insert(1);
 		arr.insert(3);
-		arr.insert(9);
+		arr.insert(45);
+		arr.insert(67);
+		arr.insert(100);
 		arr.display();
 		System.out.println("---------insert test-----------------");
-		int searchKey = 34;
+		int searchKey = 3;
 		int result = arr.find(searchKey);
 		if(result != arr.length()){
 			System.out.println(" Found " + searchKey + " in " + result );
@@ -20,6 +20,7 @@ public class HighArrayApp {
 			System.out.println(" Not Found ");
 		}
 		System.out.println("---------find test-----------------");
+		System.out.println("---------binary search only sorted-----------------");
 		arr.delete(0);
 		arr.delete(3);
 		arr.display();

@@ -23,8 +23,6 @@ public class SelectSort {
                 swap(index, j);
             }
         }
-        for (int aMyList : myList) {
-            System.out.println(aMyList);
-        }
+        for (int aMyList : myList) System.out.println(aMyList);
     }
 }
